@@ -15,5 +15,4 @@ int size = weight.Length;
         }
         Console.WriteLine(max);
     }
-Console.Write("Max is: ");
-Console.WriteLine(max);
+Console.WriteLine("Max is: " + max);
