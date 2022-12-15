@@ -1,8 +1,9 @@
-﻿int[] weight = {1,8,3,2,6};
+﻿int[] weight = {1,0,3,2,6,9};
 int i = 0;
 int max = weight[0];
+int size = weight.Length;
 
-    while (i < 5)
+    while (i < size)
     {
         if (weight[i] < max) 
         {
@@ -12,6 +13,7 @@ int max = weight[0];
             max = weight[i];
             i++;
         }
+        Console.WriteLine(max);
     }
-
+Console.Write("Max is: ");
 Console.WriteLine(max);
