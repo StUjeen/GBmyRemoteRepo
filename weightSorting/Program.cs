@@ -5,7 +5,7 @@ int size = weight.Length;
 
     while (i < size)
     {
-        if (weight[i] < max) 
+        if (weight[i] <= max) 
         {
            i++;
         } else
