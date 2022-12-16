@@ -8,5 +8,5 @@ Console.WriteLine("Enter third number:");
         min = Math.Min(min, thirdNumber);
     int max = Math.Max(firstNumber, secondNumber);
         max = Math.Max(max, thirdNumber);
-    Console.WriteLine("Min is: " + min + " and Max is: " + max);
+    Console.WriteLine($"Min is {min} and Max is {max}");
     
