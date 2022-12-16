@@ -5,5 +5,5 @@ Console.WriteLine("Enter second number:");
     int min = Math.Min(firstNumber, secondNumber);
     int max = Math.Max(firstNumber, secondNumber);
     
-    Console.WriteLine("Min is: " + min + " and Max is: " + max);
+    Console.WriteLine($"Min is {min} and Max is {max}");
     
