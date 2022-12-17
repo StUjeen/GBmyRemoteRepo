@@ -8,8 +8,8 @@ void FillArray (int[] collection)
         collection[index] = new Random().Next(1, 10);
         index++;
     }
-
 }
+
 // print array method
 void PrintArray(int[] col)
 {
@@ -23,7 +23,6 @@ void PrintArray(int[] col)
 }
 
 //find in array method
-
 int IndexOf(int[] collection, int find)
 {
     int position = -1;
@@ -37,11 +36,11 @@ int IndexOf(int[] collection, int find)
     }
     return position;
 }
+
+
 int [] array = new int [10];
 
 FillArray(array);
-//array[4] = 4;
-//array[7] = 4;
 PrintArray(array);
 Console.WriteLine();
 
