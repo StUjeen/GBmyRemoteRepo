@@ -21,8 +21,29 @@ void PrintArray(int[] col)
         position++;
     }
 }
-//input data
+
+//find in array method
+
+int IndexOf(int[] collection, int find)
+{
+    int position = -1;
+    for (int i=0; i < collection.Length; i++)
+    {
+        if (find == collection[i]) 
+        {
+            position = i;
+            break;
+        }
+    }
+    return position;
+}
 int [] array = new int [10];
 
 FillArray(array);
+//array[4] = 4;
+//array[7] = 4;
 PrintArray(array);
+Console.WriteLine();
+
+int pos = IndexOf(array, 4);
+Console.WriteLine(pos);
