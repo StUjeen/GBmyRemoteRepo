@@ -1,4 +1,4 @@
-﻿//enter and test input data 
+﻿///enter and test input data 
 int number;
 while (true)
 {
@@ -7,30 +7,28 @@ while (true)
         break;
     Console.WriteLine("Wrong number entered");
 }
-// logic
-// define number of digits
-int log = Convert.ToInt32(Math.Log10(number));
-
-
-/*int index = -1;
-int initialNum = number;
-while (initialNum != 0)
-{
-    initialNum = initialNum / 10;
-    index ++;
-}
-*/
-// show
-if (index < 2) 
+// case 1 less than 3 digits
+if (number / 100 == 0) 
 {
     Console.WriteLine($"{number} -> there is no third number");
 }
-else 
+//case 2 equal to exact 3 digits
+else if (number / 100 > 0 && number / 100 < 10)
 {
-    double power = Math.Pow(10, index);
-    int result = Convert.ToInt32(number / power); 
-    
-    Console.WriteLine($"index of the number: {index}; power of the third right hand digit is {power}; third number from the right is: {result}");
+    int result = number % 10; 
+    Console.WriteLine($"{number} -> {Math.Abs(result)}");
 }
-
-Console.WriteLine(log);
+//case more than 3 digits
+else
+{   
+    int index = -1;
+    int initialNum = number;
+    while (initialNum != 0)
+    {
+        initialNum = initialNum / 10;
+        index ++;
+    }
+    int power = Convert.ToInt32(Math.Pow(10, index-2));
+    int result = (number / power) % 10;
+    Console.WriteLine($"{number} -> {Math.Abs(result)}");
+}
