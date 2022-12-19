@@ -8,5 +8,8 @@ while (true)
         break;
     Console.WriteLine("Wrong number entered:");
 }
+//logic - to find second digit
  int result =  (number / 10) % 10;
+
+//show result
 Console.WriteLine($"{number} -> {result}");
