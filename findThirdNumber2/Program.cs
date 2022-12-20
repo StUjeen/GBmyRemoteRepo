@@ -17,5 +17,5 @@ else
     int exponent = Convert.ToInt32(Math.Floor(log));
     int power = Convert.ToInt32(Math.Pow(10, exponent-2));
     int result = (number / power) % 10;
-    Console.WriteLine($"{number} -> {result}");
+    Console.WriteLine("{0} -> {1}", number, result);
 }
