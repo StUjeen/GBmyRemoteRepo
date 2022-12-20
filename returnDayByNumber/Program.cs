@@ -1,4 +1,5 @@
-﻿//initial data
+﻿using System;
+//initial data
 int[] dayNumber = {1,2,3,4,5,6,7};
 string[] dayName = {"Monday","Teusday","Wensday","Thursday","Friday","Saturday","Sunday"};
 int nameLength = dayName.Length;
