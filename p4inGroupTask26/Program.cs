@@ -35,7 +35,7 @@ int GetCountNumbers(int number)
     double log = Math.Log10(number);
     int count = Convert.ToInt32(Math.Ceiling(log));
     int rest = number % 10;
-    //Console.WriteLine(rest);
+    Console.WriteLine(rest);
 
     if (rest == 0 || number == 1)
     {
