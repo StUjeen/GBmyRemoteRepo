@@ -54,7 +54,7 @@ int GetCountPositiveNumbers(int[] array)
 
 }
 
-//*********ВЫВОД ДАННЫХ*********
+//*********3 ВЫВОД ДАННЫХ*********
 void PrintArray(int[] array)
 {
     Console.Write($"[");
