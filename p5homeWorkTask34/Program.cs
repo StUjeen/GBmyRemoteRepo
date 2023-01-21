@@ -11,18 +11,7 @@ int[] array = CreateArray();
 int countEven = GetCountEvenInArray(array);
 
 //*******3 ВЫВОД ДАННЫХ*********
-Console.Write($"[");
-for (int i = 0; i < array.Length; i++)
-{
-    if (i == array.Length - 1)
-    {
-        Console.Write($"{array[i]}]");
-    }
-    else
-    {
-        Console.Write($"{array[i]},");
-    }
-}
+PrintArray(array);
 Console.Write($" -> {countEven}");
 
 ///////////////МЕТОДЫ/////////////////
@@ -54,4 +43,20 @@ int GetCountEvenInArray(int[] array)
     }
     return count;
 }
-
+//*******3 ВЫВОД ДАННЫХ*********
+//вывод массива на экран
+void PrintArray(int[] array)
+{
+    Console.Write($"[");
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (i == array.Length - 1)
+        {
+            Console.Write($"{array[i]}]");
+        }
+        else
+        {
+            Console.Write($"{array[i]},");
+        }
+    }
+}
