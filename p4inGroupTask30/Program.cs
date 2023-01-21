@@ -10,29 +10,39 @@
 //*******1 ВВОД ДАННЫХ*********
 Console.Clear();
 
-int num = GetNumberFromUser("Enter integer N: ", "Input Error!");
+int[] num = GetRandomNumbers();
 //*******2 ВЫЧИСЛЕНИЕ**********
-int productNumbers = GetProductNumbers(num);
+//int productNumbers = GetProductNumbers(num);
 //*******3 ВЫВОД ДАННЫХ*********
-Console.WriteLine($"{num} -> {productNumbers}");
+Console.Write($"[");
+for (int i = 0; i < num.Length; i++)
+{
+    if (i == num.Length - 1)
+    {
+        Console.Write($"{num[i]}");
+    }
+    else
+    {
+        Console.Write($"{num[i]}, ");
+    }
 
+}
+Console.Write($"]");
 ///////////////МЕТОДЫ/////////////////
 //*******1 ВВОД ДАННЫХ*********
-int GetNumberFromUser(string message, string errorMeassage)
+int[] GetRandomNumbers()
 {
-    while (true)
+    int[] arr = new int[8];
+    Random rnd = new Random();
+    for (int i = 0; i < arr.Length; i++)
     {
-        Console.Write(message);
-        bool isCorrect = int.TryParse(Console.ReadLine(), out int userNumber);
-        if (isCorrect)
-            return userNumber;
-        Console.WriteLine(errorMeassage);
-
+        arr[i] = rnd.Next(0, 2);
     }
+    return arr;
 }
 
 //*******2 ВЫЧИСЛЕНИЕ**********
-int GetProductNumbers(int number)
+/*int GetProductNumbers(int number)
 {
     int product = 1;
     for (int i = 1; i <= number; i++)
@@ -42,3 +52,4 @@ int GetProductNumbers(int number)
     return product;
 
 }
+*/
