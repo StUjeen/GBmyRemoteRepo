@@ -1,6 +1,8 @@
-﻿///////////////////////////////////////////////////////
-//////// Произведение чисел от 1 до N /////////////////
+﻿/////////////////////////////////////////////////////////
+//////// (A и B) и возводит число ///////////////////////
+//////// A в натуральную степень B /////////////////////
 ///////////////////////////////////////////////////////
+
 // Сначала описываем этапы выполнения программы
 // три этапа:
 // 1 ввод данных
@@ -9,21 +11,21 @@
 /////////ТЕЛО ПРОГРАММЫ//////////////
 //*******1 ВВОД ДАННЫХ*********
 Console.Clear();
-for (int i = 0; i < 8; i++)
+int[] inputArray = new int[2];
+for (int i = 0; i < 2; i++)
 {
-int[] num = GetArrayFromUser($"Enter array element [{i}]: ","Input Error!");
+    int num = GetNumbersFromUser($"Enter number[{i+1}]: ", "Input Error!");
+    inputArray[i] = num;
 }
-
 //*******2 ВЫЧИСЛЕНИЕ**********
-//int productNumbers = GetProductNumbers(num);
+int power = GetPowerNumbers(inputArray[0], inputArray[1]);
 //*******3 ВЫВОД ДАННЫХ*********
-Console.Write($"[");
-Console.Write(num);
-Console.Write($"]");
+
+Console.Write($"{inputArray[0]}, {inputArray[1]} -> {power}");
+
 ///////////////МЕТОДЫ/////////////////
 //*******1 ВВОД ДАННЫХ*********
-
-int GetArrayFromUser(string message, string errorMeassage)
+int GetNumbersFromUser(string message, string errorMeassage)
 {
     while (true)
     {
@@ -36,15 +38,9 @@ int GetArrayFromUser(string message, string errorMeassage)
     }
 }
 
-//*******2 ВЫЧИСЛЕНИЕ**********
-/*int GetProductNumbers(int number)
+//*******2 ВЫЧИСЛЕНИЕ*********
+int GetPowerNumbers(int a, int b)
 {
-    int product = 1;
-    for (int i = 1; i <= number; i++)
-    {
-        product *= i;
-    }
-    return product;
-
+    int result = Convert.ToInt32(Math.Pow(a, b));
+    return result;
 }
-*/
