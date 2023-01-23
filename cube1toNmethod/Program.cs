@@ -8,7 +8,7 @@ cubeRow(ref n);
 
 
 //logic
-static string cubeRow (ref int n)
+void cubeRow (ref int n)
 {
     
     for (int i = 1; i <= n; i++)
@@ -24,5 +24,4 @@ static string cubeRow (ref int n)
             Console.Write($"{sqrtI}.");
         }
     }
-    return;
 }
