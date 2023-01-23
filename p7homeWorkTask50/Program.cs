@@ -14,6 +14,7 @@ int m = Convert.ToInt32(Console.ReadLine());
 Console.Write("Enter n: ");
 int n = Convert.ToInt32(Console.ReadLine());
 //*******2 ВЫЧИСЛЕНИЕ**********
+
 double[,] array = GetArray(m, n);
 int row = GetRowFromUser("Enter row number: ",$"Wrong number, enter number between 0 and {array.GetLength(0) - 1} ");
 int col = GetColFromUser("Enter col number: ",$"Wrong number, enter number between 0 and {array.GetLength(0) - 1} ");
