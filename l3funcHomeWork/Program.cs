@@ -17,7 +17,7 @@ void SelectionSort(int[] array)
 {
     for (int i = 0; i < array.Length - 1; i++)
     {
-        //                 i  j
+        //                    i  j
         //int[] arr = { 9, 0, 1, 3, 6, 5, 7, 2, 8 };
         int maxPosition = i;
         for (int j = i + 1; j < array.Length; j++)
