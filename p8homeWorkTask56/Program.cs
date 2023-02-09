@@ -9,7 +9,7 @@
 */
 
 ///////////////////////Создание массива///////////////////////
-int[,] sourceArray = {{1,4,7,2},{5,9,2,3},{8,4,2,4},{5,2,6,7}};
+int[,] sourceArray = { { 1, 4, 7, 2 }, { 5, 9, 2, 3 }, { 8, 4, 2, 4 }, { 5, 2, 6, 7 } };
 PrintArray(sourceArray);
 Console.WriteLine();
 ///////////////////////Поиск минимальной суммы///////////////////////
@@ -29,20 +29,20 @@ int countLineSum(int[,] sourceArray)
         int lineSum = 0;
         for (int j = 0; j < sourceArray.GetLength(1); j++)
         {
-            lineSum = lineSum + sourceArray[i,j];
+            lineSum = lineSum + sourceArray[i, j];
         }
         stringNumber[i] = lineSum;
-        Console.Write($"{i+1}: {lineSum}");
+        Console.Write($"{i + 1}: {lineSum}");
         Console.WriteLine();
     }
 
     int lineNumber = 1;
     int minSum = stringNumber[0];
-     for (int i = 0; i < stringNumber.Length; i++)
-     {
+    for (int i = 0; i < stringNumber.Length; i++)
+    {
         if (stringNumber[i] < minSum)
-            lineNumber = i+1;
-     }
+            lineNumber = i + 1;
+    }
     return lineNumber;
 }
 
